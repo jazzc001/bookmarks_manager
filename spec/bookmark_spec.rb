@@ -1,4 +1,4 @@
-describe Bookmark do
+describe '.all' do
 
   it "can call all on itself and display an array of bookmarks" do
     adding_three_urls_to_test_database
@@ -13,5 +13,12 @@ describe Bookmark do
 
     expect(bookmark).to match_array([])
   end
-  
+
+end
+
+describe '.create' do
+  it 'add new urls' do
+      Bookmark.create("www.youtube.com")
+      expect(Bookmark.all).to include("www.youtube.com")
+  end
 end

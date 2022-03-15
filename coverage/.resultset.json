@@ -19,6 +19,32 @@
           1,
           null,
           null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/chrislovell/Desktop/Projects/bookmarks_manager/spec/features/add_new_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -43,6 +69,6 @@
         ]
       }
     },
-    "timestamp": 1647359088
+    "timestamp": 1647364215
   }
 }

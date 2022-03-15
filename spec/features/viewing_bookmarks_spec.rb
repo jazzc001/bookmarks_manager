@@ -5,6 +5,7 @@ feature "Viewing bookmarks" do
   end
 
   scenario "go to bookmark page and see bookmarks" do
+    adding_three_urls_to_test_database
     visit("/")
     click_button "List of bookmarks"
     expect(page).to have_content "http://www.makersacademy.com/"

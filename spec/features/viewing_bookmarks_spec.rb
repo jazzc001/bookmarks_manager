@@ -8,9 +8,9 @@ feature "Viewing bookmarks" do
     adding_three_urls_to_test_database
     visit("/")
     click_button "List of bookmarks"
-    expect(page).to have_content "http://www.makersacademy.com/"
-    expect(page).to have_content "http://www.destroyallsoftware.com"
-    expect(page).to have_content "http://www.google.com/"
+    expect(page).to have_content "Makers"
+    expect(page).to have_content "DAS"
+    expect(page).to have_content "Google"
   end
 
 end

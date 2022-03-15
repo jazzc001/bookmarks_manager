@@ -9,7 +9,8 @@ feature "Add new bookmarks" do
         visit("/")
         click_button("Add Bookmark")
         fill_in(:url_to_add, with: 'http://youtube.com')
+        fill_in(:url_title, with: 'YouTube')
         click_button "Submit"
-        expect(page).to have_content('http://youtube.com')
+        expect(page).to have_content('YouTube')
     end
 end

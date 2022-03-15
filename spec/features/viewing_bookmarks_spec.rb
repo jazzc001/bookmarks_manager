@@ -7,8 +7,9 @@ feature "Viewing bookmarks" do
   scenario "go to bookmark page and see bookmarks" do
     visit("/")
     click_button "List of bookmarks"
-    expect(page).to have_content "https://makers.tech/"
-    expect(page).to have_content "https://github.com/jazzc001"
+    expect(page).to have_content "http://www.makersacademy.com/"
+    expect(page).to have_content "http://www.destroyallsoftware.com"
+    expect(page).to have_content "http://www.google.com/"
   end
 
 end

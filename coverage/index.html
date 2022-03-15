@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-14T16:13:35+00:00">2022-03-14T16:13:35+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-14T17:49:33+00:00">2022-03-14T17:49:33+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>12</b> relevant lines,
-    <span class="green"><b>12</b> lines covered</span> and
+    <b>14</b> relevant lines,
+    <span class="green"><b>14</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -71,22 +71,22 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#0bb2cf294376580f481d6a7aadfa49b960d22635" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#5d5c27f93583bdab1c979d6837342373b87d02f8" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#70fffe40e454482c9a90632c86995989cfd90a09" class="src_link" title="spec/features/viewing_bookmarks_spec.rb">spec/features/viewing_bookmarks_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#faaf762e9cdf9a940cb026fed1784a33ec98993d" class="src_link" title="spec/features/viewing_bookmarks_spec.rb">spec/features/viewing_bookmarks_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -109,7 +109,7 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="0bb2cf294376580f481d6a7aadfa49b960d22635">
+        <div class="source_table" id="5d5c27f93583bdab1c979d6837342373b87d02f8">
   <div class="header">
     <h3>spec/bookmark_spec.rb</h3>
     <h4>
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -164,12 +164,23 @@
 
             
 
-            <code class="ruby">    expect(Bookmark.all).to eq([&quot;https://makers.tech/&quot;, &quot;https://github.com/jazzc001&quot;])</code>
+            <code class="ruby">    bookmark = Bookmark.all</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(bookmark).to eq([&quot;http://www.google.com/&quot;, &quot;http://www.makersacademy.com/&quot;, &quot;http://www.destroyallsoftware.com&quot;])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -180,7 +191,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -195,7 +206,7 @@
 </div>
 
       
-        <div class="source_table" id="70fffe40e454482c9a90632c86995989cfd90a09">
+        <div class="source_table" id="faaf762e9cdf9a940cb026fed1784a33ec98993d">
   <div class="header">
     <h3>spec/features/viewing_bookmarks_spec.rb</h3>
     <h4>
@@ -209,8 +220,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -327,7 +338,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;https://makers.tech/&quot;</code>
+            <code class="ruby">    expect(page).to have_content &quot;http://www.makersacademy.com/&quot;</code>
           </li>
         </div>
       
@@ -338,18 +349,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;https://github.com/jazzc001&quot;</code>
+            <code class="ruby">    expect(page).to have_content &quot;http://www.destroyallsoftware.com&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(page).to have_content &quot;http://www.google.com/&quot;</code>
           </li>
         </div>
       
@@ -360,12 +371,23 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 

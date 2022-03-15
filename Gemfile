@@ -8,3 +8,4 @@ gem 'capybara'
 gem 'webrick'
 gem 'simplecov', require: false
 gem 'simplecov-console', require: false
+gem 'pg'

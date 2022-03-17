@@ -3,7 +3,9 @@ require_relative './database_helper'
 describe '.all' do
 
   it "can call all on itself and display an array of bookmarks" do
-    adding_three_urls_to_test_database
+    Bookmark.create(url: 'http://www.google.com/', title: 'Google')
+    Bookmark.create(url: 'http://www.makersacademy.com/', title: "Makers")
+    Bookmark.create(url: 'http://www.destroyallsoftware.com/', title: "DAS")
 
     bookmark = Bookmark.all
 
@@ -24,8 +26,8 @@ describe '.all' do
     
     expect(bookmark).to be_a Bookmark
     expect(bookmark.id).to eq persisted_data['id']
-    expect(bookmark.title).to eq "YouTube"
-    expect(bookmark.url).to eq 'www.youtube.com'
+    expect(bookmark).to have_attributes(title: "YouTube", url: 'www.youtube.com') 
+  
   end
 
 end

@@ -118,6 +118,11 @@
           null
         ]
       },
+      "/Users/jasminecheung/Makers/bookmarks_manager/spec/databaseconnection_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/jasminecheung/Makers/bookmarks_manager/spec/features/add_new_bookmarks_spec.rb": {
         "lines": [
           1,
@@ -213,6 +218,6 @@
         ]
       }
     },
-    "timestamp": 1647601825
+    "timestamp": 1647604300
   }
 }

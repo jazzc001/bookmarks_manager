@@ -67,6 +67,38 @@ describe Bookmark do
       expect(bookmarks.first.title).to eq 'Makers'
     end
   end
+
+  describe '.update' do
+    it 'update a bookmark' do
+      bookmark1 = Bookmark.create(url: 'http://www.google.com/', title: 'Google')
+      bookmark2 = Bookmark.create(url: 'http://www.makersacademy.com/', title: "Makers")
+      bookmark3 = Bookmark.create(url: 'http://www.destroyallsoftware.com/', title: "DAS")
+      Bookmark.update(id: bookmark1.id, title: 'youtube', url: 'www.youtube.com')
+      
+      bookmarks = Bookmark.all
+
+      expect(bookmarks.length).to eq 3
+      expect(bookmarks.last.id).to eq bookmark1.id
+      expect(bookmarks.last.title).to eq 'youtube'
+      expect(bookmarks.last.url).to eq 'www.youtube.com'
+    end
+  end
+
+  describe '.search' do
+    it 'search for a bookmark by id' do
+      bookmark1 = Bookmark.create(url: 'http://www.google.com/', title: 'Google')
+      bookmark2 = Bookmark.create(url: 'http://www.makersacademy.com/', title: "Makers")
+      bookmark3 = Bookmark.create(url: 'http://www.destroyallsoftware.com/', title: "DAS")
+      b = Bookmark.search(id: bookmark1.id)
+
+      expect(b.id).to eq bookmark1.id
+      expect(b.title).to eq bookmark1.title
+      expect(b.url).to eq bookmark1.url
+
+    end
+
+    
+  end
   
   
 

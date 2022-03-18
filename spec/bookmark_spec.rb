@@ -94,10 +94,7 @@ describe Bookmark do
       expect(b.id).to eq bookmark1.id
       expect(b.title).to eq bookmark1.title
       expect(b.url).to eq bookmark1.url
-
     end
-
-    
   end
   
   

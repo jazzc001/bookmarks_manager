@@ -1,4 +1,4 @@
-require_relative 'databaseconnection'
+require_relative 'database_connection'
 
 class Bookmark
   attr_reader :id, :title, :url

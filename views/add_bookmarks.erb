@@ -1,6 +1,6 @@
 
 <form action="/adding-bookmarks" method="post">
-  <input type="text" name="url_to_add" >
+  <input type="text" name="url_to_add" value="http://"> <%= flash[:notice] %> 
   <input type="text" name="url_title" >
   <input type="submit" value="Submit">
 </form>

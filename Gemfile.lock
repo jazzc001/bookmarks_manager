@@ -66,12 +66,15 @@ GEM
       rack-protection (= 2.2.0)
       sinatra (= 2.2.0)
       tilt (~> 2.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sinatra-reloader (1.0)
       sinatra-contrib
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     tilt (2.0.10)
     unicode-display_width (2.1.0)
+    uri (0.11.0)
     webrick (1.7.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
@@ -88,7 +91,9 @@ DEPENDENCIES
   simplecov-console
   sinatra
   sinatra-contrib
+  sinatra-flash
   sinatra-reloader
+  uri
   webrick
 
 BUNDLED WITH
